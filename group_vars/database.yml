@@ -1,0 +1,28 @@
+---
+ssh_keys_mode: 'server'
+ssh_keys_server_user: 'jenkins'
+ssh_keys_server_password: 'myamazingpassword'
+
+app_service_db_user: 'testdbuser'
+app_service_db_password: 'test1234'
+app_service_db_database_name: 'testdb'
+
+postgresql_user:
+  - name: "{{ app_service_db_user }}"
+    password: "{{ app_service_db_password }}"
+
+postgresql_database:
+  - name: "{{ app_service_db_database_name }}"
+
+postgresql_custom_sql:
+  - db: "{{ app_service_db_database_name }}"
+    sql: "GRANT CREATE,USAGE ON SCHEMA public TO {{ app_service_db_user }};"
+
+postgresql_hba_config_entries:
+  - type: "host"
+    database: "{{ app_service_db_database_name }}"
+    user: "{{ app_service_db_user }}"
+    address: "192.168.39.12/32"
+    auth: md5
+
+postgresql_listen_addresses: "'*'"

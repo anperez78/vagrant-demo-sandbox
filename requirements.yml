@@ -1,0 +1,10 @@
+---
+- name: postgresql
+  src: https://github.com/anperez78/ansible-role-postgresql.git
+  scm: git
+  version: master
+  
+- name: sshkeys
+  src: https://github.com/anperez78/ansible-role-sshkeys.git
+  scm: git
+  version: master
