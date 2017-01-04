@@ -1,0 +1,5 @@
+[service-api]
+192.168.39.12 ansible_ssh_user=jenkins ansible_ssh_private_key_file=/var/lib/jenkins/.ssh/id_jenkins_rsa
+
+[sandbox:children]
+service-api

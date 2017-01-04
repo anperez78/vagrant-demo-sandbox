@@ -1,0 +1,19 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+
+database:
+  driverClass: org.postgresql.Driver
+  user: {{ app_service_db_user }}
+  password: {{ app_service_db_password }}
+  url: jdbc:postgresql://{{ app_service_db_hostname }}/{{ app_service_db_database_name }}
+  properties:
+    charSet: UTF-8
+  maxWaitForConnection: 1s
+  validationQuery: "/* MyService Health Check */ SELECT 1"
+  minSize: 8
+  maxSize: 32
+  checkConnectionWhileIdle: false
+  evictionInterval: 10s
+  minIdleTime: 1 minute

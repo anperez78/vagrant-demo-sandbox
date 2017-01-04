@@ -31,7 +31,7 @@ Vagrant.configure(2) do |config|
       srv.dns.patterns = [/^.*#{server[:name]}.dev$/]
 
       srv.vm.provision "ansible" do |ansible|
-        ansible.playbook = "playbook.yml"
+        ansible.playbook = "playbooks/install.yml"
         ansible.galaxy_role_file = "requirements.yml"
         ansible.galaxy_roles_path = "roles/"
         ansible.groups = {

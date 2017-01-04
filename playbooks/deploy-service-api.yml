@@ -1,0 +1,6 @@
+---
+- hosts: service-api
+  become: yes
+  roles:
+    - { role: geerlingguy.repo-epel }
+    - { role: anperez78.dropwizard }
