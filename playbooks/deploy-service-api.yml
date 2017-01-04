@@ -2,5 +2,5 @@
 - hosts: service-api
   become: yes
   roles:
-    - { role: geerlingguy.repo-epel }
-    - { role: anperez78.dropwizard }
+    - geerlingguy.repo-epel
+    - anperez78.dropwizard
