@@ -6,16 +6,16 @@ ssh_keys_server_password: 'myamazingpassword'
 java_packages:
   - java-1.8.0-openjdk
 
-dropwizard_service_name: 'application-service'
-dropwizard_service_config_source: 'templates/service-api/application-service.yml.j2'
+dropwizard_service_name: 'demo-service'
+dropwizard_service_config_source: 'templates/service-api/demo-service.yml.j2'
 
 app_service_db_user: 'testdbuser'
 app_service_db_password: 'test1234'
 app_service_db_database_name: 'testdb'
 app_service_db_hostname: '192.168.39.13'
 
-artifactory_group_id: application.service
-artifactory_artifact_id: application-service
+artifactory_group_id: demo
+artifactory_artifact_id: demo-service
 artifactory_artifact_version: 1.0.0-SNAPSHOT
 artifactory_artifact_classifier: fat
 artifactory_repository_url: http://192.168.39.11:8081/artifactory/libs-snapshot-local
