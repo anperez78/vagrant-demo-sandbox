@@ -1,17 +1,22 @@
 ---
 - src: geerlingguy.repo-epel
 
-- name: postgresql
+- name: anperez78.postgresql
   src: https://github.com/anperez78/ansible-role-postgresql.git
   scm: git
   version: master
 
-- name: sshkeys
+- name: anperez78.sshkeys
   src: https://github.com/anperez78/ansible-role-sshkeys.git
   scm: git
   version: master
 
 - name: anperez78.dropwizard
   src: https://github.com/anperez78/ansible-role-dropwizard.git
+  scm: git
+  version: master
+
+- name: anperez78.nodejs
+  src: https://github.com/anperez78/ansible-role-nodejs.git
   scm: git
   version: master

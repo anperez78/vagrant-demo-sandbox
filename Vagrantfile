@@ -11,6 +11,11 @@ servers = [
     name: 'database',
     group: 'database',
     ip: '192.168.39.13'
+  },
+  {
+    name: 'frontend',
+    group: 'frontend',
+    ip: '192.168.39.14'
   }
 ]
 

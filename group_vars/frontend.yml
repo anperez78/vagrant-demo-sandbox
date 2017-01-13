@@ -1,0 +1,4 @@
+---
+ssh_keys_mode: 'server'
+ssh_keys_server_user: 'jenkins'
+ssh_keys_server_password: 'myamazingpassword'

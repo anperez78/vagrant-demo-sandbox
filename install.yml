@@ -2,9 +2,15 @@
 - hosts: service-api
   become: yes
   roles:
-    - sshkeys
+    - anperez78.sshkeys
 
 - hosts: database
   become: yes
   roles:
-    - postgresql
+    - anperez78.postgresql
+
+- hosts: frontend
+  become: yes
+  roles:
+    - anperez78.sshkeys
+    - anperez78.nodejs
