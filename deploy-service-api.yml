@@ -2,5 +2,4 @@
 - hosts: service-api
   become: yes
   roles:
-    - geerlingguy.repo-epel
     - anperez78.dropwizard
